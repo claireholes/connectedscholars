@@ -1,0 +1,67 @@
+---
+title: "Connected scholars: Examining the role of social media in engagement practices for faculty at land grant universities in the United States"
+author: Claire M. Holesovsky
+date: |
+  `r format(Sys.time(), '%B %d, %Y')`
+abstract: |
+  Using a large-scale census of faculty at 46 land-grant universities across the United States, this study examined the effects of social media and engagement-related factors on the frequency of tenured-track science faculty’s social media use. Results from the multiple regression model revealed that: attitudes towards social media and self-efficacy surrounding engagement were positive predictors of frequency of social media use. Furthermore, the relationship between social media and engagement-related factors and frequency of social media use was influenced by faculty’s tenure status, field of work, age, and gender. Implications and limitations of these findings were discussed.
+
+geometry: margin = 1.0in              # margin widths
+fontsize: 12pt                         # text size
+bibliography: bibliography-example.bib # bibliography file
+biblio-style: authoryear               # citation style
+urlcolor: blue                         # links to external URLs
+citecolor: black                       # links to bibliography
+linkcolor: magenta                     # internal figures, footnotes, etc.
+indent: false                          # paragraph format
+                                       # (true for indented paragraphs)
+                                       
+output: 
+  bookdown::pdf_document2:
+    keep_tex: true
+    latex_engine: xelatex
+    number_sections: true
+    toc: true
+    fig_caption: true
+    citation_package: biblatex
+    includes: 
+      in_header: 
+  bookdown::html_document2: default
+  bookdown::word_document2:
+    toc: true
+---
+
+# Overview
+This paper is a submission to the Association for Education in Journalism and Mass Communication conference. This paper started as a project for a previous regression class I took last semester and I have continued to develop for this conference.
+
+# Introduction
+
+```{r packages, include = FALSE, cache = FALSE}
+# even if you set chunk option `cache = TRUE`, 
+#   you typically do NOT want to cache the package chunk.
+library("here")      # control directories
+library("magrittr")  # more pipe operators
+library("tidyverse") # data manipulation/visualization workhorse
+library("broom")     # model output
+library("knitr")     # explicitly attached for kable()
+library("foreign")
+```
+
+
+# Literature Review
+
+
+
+# Methods
+
+
+
+# Results
+
+
+
+# Discussion
+
+
+
+# Conclusion
