@@ -1,0 +1,176 @@
+\PassOptionsToPackage{unicode=true}{hyperref} % options for packages loaded elsewhere
+\PassOptionsToPackage{hyphens}{url}
+\PassOptionsToPackage{dvipsnames,svgnames*,x11names*}{xcolor}
+%
+\documentclass[12pt,]{article}
+\usepackage{lmodern}
+\usepackage{amssymb,amsmath}
+\usepackage{ifxetex,ifluatex}
+\usepackage{fixltx2e} % provides \textsubscript
+\ifnum 0\ifxetex 1\fi\ifluatex 1\fi=0 % if pdftex
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provides euro and other symbols
+\else % if luatex or xelatex
+  \usepackage{unicode-math}
+  \defaultfontfeatures{Ligatures=TeX,Scale=MatchLowercase}
+\fi
+% use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+% use microtype if available
+\IfFileExists{microtype.sty}{%
+\usepackage[]{microtype}
+\UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\IfFileExists{parskip.sty}{%
+\usepackage{parskip}
+}{% else
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{6pt plus 2pt minus 1pt}
+}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\hypersetup{
+            pdftitle={Socially connected scholars: Examining the role of social media in engagement practices for faculty at land grant universities in the United States},
+            pdfauthor={Claire M. Holesovsky},
+            colorlinks=true,
+            linkcolor=magenta,
+            filecolor=Maroon,
+            citecolor=black,
+            urlcolor=blue,
+            breaklinks=true}
+\urlstyle{same}  % don't use monospace font for urls
+\usepackage[margin = 1.0in]{geometry}
+\usepackage{longtable,booktabs}
+% Fix footnotes in tables (requires footnote package)
+\IfFileExists{footnote.sty}{\usepackage{footnote}\makesavenoteenv{longtable}}{}
+\usepackage{graphicx,grffile}
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
+\makeatother
+% Scale images if necessary, so that they will not overflow the page
+% margins by default, and it is still possible to overwrite the defaults
+% using explicit options in \includegraphics[width, height, ...]{}
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+\setlength{\emergencystretch}{3em}  % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{5}
+% Redefines (sub)paragraphs to behave more like sections
+\ifx\paragraph\undefined\else
+\let\oldparagraph\paragraph
+\renewcommand{\paragraph}[1]{\oldparagraph{#1}\mbox{}}
+\fi
+\ifx\subparagraph\undefined\else
+\let\oldsubparagraph\subparagraph
+\renewcommand{\subparagraph}[1]{\oldsubparagraph{#1}\mbox{}}
+\fi
+
+% set default figure placement to htbp
+\makeatletter
+\def\fps@figure{htbp}
+\makeatother
+
+\usepackage[style=authoryear,]{biblatex}
+\addbibresource{bibliography-example.bib}
+
+\title{Socially connected scholars: Examining the role of social media in engagement practices for faculty at land grant universities in the United States}
+\author{Claire M. Holesovsky}
+\date{May 06, 2020}
+
+\begin{document}
+\maketitle
+\begin{abstract}
+As scientists turn to social media for public communication and scientific collaboration, we use results from a large-scale census of faculty at land-grant universities across the United States to examine the current social media uses and attitudes of science faculty (N=6,242). A regression analysis reveals that attitudes towards social media, perceived university engagement climate, and personal motivations are among significant predictors of engaged social media use among science faculty. Implications of these findings are discussed.
+\end{abstract}
+
+{
+\hypersetup{linkcolor=}
+\setcounter{tocdepth}{2}
+\tableofcontents
+}
+\hypertarget{overview}{%
+\section{Overview}\label{overview}}
+
+This paper has been adapted from an extended abstract submission to the Association for Education in Journalism and Mass Communication conference. Due to dataset complications, this proposal has been re-worked for the Spring 2020 PS 811 course at UW-Madison taught by Michael DeCrescenzo.
+
+\hypertarget{introduction}{%
+\section{Introduction}\label{introduction}}
+
+Over the last few years, social media has become an increasingly integral forum for sharing and spreading news and information. At the same time, there has been an increase in calls for outreach efforts from the scientific community to engage the public in various scientific disciplines, seeking to broaden public understanding, appreciation, and involvement in science. Although scientists have long been involved in sharing their work with the general public through a variety of science communication activities (Rowe \& Frewer, 2005), the traditional forums of transferring information from sources of scientific authority to the public through local experts are becoming outdated by emerging online technologies that facilitate rapid horizontal information sharing (Keller, Labrique, Jain, Pekosz, \& Levine, 2014).
+
+Stemming from the rise of the internet and social media, these platforms have surfaced as a source for both general and issue-specific science information as more people turn to social media platforms for discourse on news, controversial and timely issues, and science (NSB, 2018). As social media and the internet have become key sources of news and information for American adults about a variety of topics, it offers opportunities, and challenges, for scientists seeking to use social media to reach members of the public and to connect with the broader scientific community through these platforms. Reflecting this change, the last decade has seen those in the scientific community turning their attention to social media as an emerging forum for science communication (see Brossard \& Scheufele, 2013; Peters, Dunwoody, Allgaier, Lo, \& Brossard, 2014) and scientific research (e.g., Yeo et al., 2017). In particular, social media, as a participatory form of media, offers a unique potential for science engagement and two-way dialogue (e.g., Jia, Wang, Miao, \& Zhu, 2017; Peters et al., 2014; Smith, 2015), especially as many members of the public who are not regular science news consumers may encounter science information incidentally (Fletcher \& Nielsen, 2018; Funk, Gottfried, \& Mitchell, 2017). Research on science communication on social media has shown that this form of communication can be beneficial (Jünger \& Fähnrich, 2020), although the efficacy may depend on the forum and intent of the communication (Jia et al., 2017). While social media may offer benefits to scientists both within the academic community and externally, there are also serious drawbacks associated with its use.
+
+Using a census of scientists at land-grant universities in the U.S., we will assess the current social media use and attitudes of a substantial cohort of scientists. In assessing the current standing of social media as a platform for science and science communication, we will provide context for current interest in increased social media activity by scientists as well as ongoing research focusing on science and social media. Lastly, we will explore how scientists' own attitudes toward social media impact their use of the platform and provide insights into potential areas of concern held by those seeking to encourage scientists' social media use.
+
+\hypertarget{condensed-literature-review}{%
+\section{Condensed Literature Review}\label{condensed-literature-review}}
+
+Little research has focused specifically on predicting scientists' use of social media as a forum for public engagement and research, however, there is considerably more research on scientist' public engagement and communication efforts more broadly. Previous studies on scientists' public engagement and communication activities have identified a number of factors associated with their actual involvement and their willingness to partake. Based on past research demographics, fields of study, tenure status, and self-efficacy have all been identified as predictors of engagement involvement, among others (for a recent example, see Besley, Dudo, Yuan, \& Lawrence, 2018).
+
+Building on this research, we will include demographic (academic age, gender), university position (tenure status, fields of study) as controls in our model, in addition to beliefs related to the university engagement climate, personal motivations and drawbacks, and efficacy beliefs. Specifically looking at attitudes towards social media for engagement purposes, Besley et al. (2018) found that overall willingness to engage may be driven primarily by attitude toward engagement and scientists' engagement-related efficacy beliefs. Given an inherent connection between willingness to engage and actual participation, we propose the following research question exploring how attitudes toward social media as a forum for scientific engagement and research impact using social media for those same purposes:
+
+RQ1: How do scientists' attitudes toward social media impact their use of social media for engagement and research-related purposes?
+
+\hypertarget{methods}{%
+\section{Methods}\label{methods}}
+
+To study science faculty members' use of and attitudes toward social media for work-related purposes, we will use data from a census survey of faculty members at specific land-grand universities across the U.S. The survey was conducted from May to July 2018 using the contact information of faculty (email addresses, names) collected from the websites of each university. The final sample will consist of 46 land grant universities (within 45 university systems).
+
+To focus our analyses on faculty scientists, we will narrow our final sample based on field of study and tenure status. We will identify scientists based on research areas identified by the National Science Foundation (NSF; see below for more information on the specific fields) and included life, social, and physical scientists in the analyses. We will additionally limit our sample to tenure-track faculty only, including tenured faculty and those in a tenure-track position who are not yet tenured (determined by asking respondents if they were in a tenure-track position). With these stipulations in place, our relevant sample size will be N=6,242 tenure-track science faculty.
+
+\hypertarget{measures}{%
+\subsection{Measures}\label{measures}}
+
+Demographics and university position. In the model, we will control for demographic variables related to scientists' social media use and attitudes. Academic age will be a continuous variable created by asking respondents what year they received their highest degree. Answers will then be subtracted from 2018 (when the survey was fielded) to attain the academic ages of respondents when they took the survey. Gender will be included as a dichotomous variable (1 = female, 0 = male). Tenure status will be included as a dichotomous variable, determined by asking the respondents who indicated they were in a tenure-track positions if they were tenured (1 = tenured; 0 = tenure-track/not yet tenured). Field will be measured by asking respondents to indicate which of the following fields they are in based on the research areas identified by the NSF with ``Arts and humanities'' and ``Other'' categories (respondents could select multiple). Those who selected the other category will later categorized following the detailed areas outlined in the NSF classification of fields of study (see NSF, 2015). Social sciences field will be a dichotomous variable that includes those who work in ``Environmental resources and education,'' ``Social, behavioral, and economic sciences,'' or ``Education and human resources'' excluding those who also select ``Arts and humanities''. Life sciences field will be a dichotomous variable, including anyone who worked in ``Agriculture and food sciences,'' ``Biological sciences,'' or ``Medical sciences''. Physical sciences field will not be included in the model as the outgroup but consists of those who selected the categories ``Computer and information sciences,'' ``Engineering,'' ``Geoscience,'' or ``Math and physics''. The social sciences field will be given priority over the other fields (i.e., if respondents selected a social sciences field, they were placed exclusively in that category), while life and physical sciences will be non-exclusive.
+
+University engagement climate. PE core component of faculty work will be measured on a 5-point scale (1 = ``Strongly disagree'' to 5 = ``Strongly agree'') asking respondents how much they agreed with the statement, ``Public engagement is treated as a core component of the work expected of faculty members at your university, as important as research and/or teaching''. Communicators well regarded will be measured on a 5-point scale (1 = ``Strongly disagree'' to 5 = ``Strongly agree'') by asking respondents how much they agreed with the statement, ``Scientists at your university who take part in public communication are well regarded by their peers''.
+
+Motivations and drawbacks. Motivations for engagement will be measured by asking agreement with the following statements on personal motivations to engage on a 5-point scale (1 = ``Strongly disagree'' to 5 = ``Strongly agree''): (a) ``Sense of duty or a personal commitment'' and (b) ``Personal satisfaction or enjoyment.'' The two items will then be averaged to create a composite measure of Motivations to engage. Drawbacks to engagement will be measured through four items asking respondents to rate their agreement with the following as drawbacks to scientists engaging with the public on a 5-point scale (1 = ``Strongly disagree'' to 5 = ``Strongly agree''): (a) ``It makes them less involved in their own research,'' (b) ``It diverts money from other activities,'' (c) ``It does not help their career,'' and (d) ``It is not the job of scientists.'' These items will then be averaged to create a composite measure of Drawbacks to engagement.
+
+Self-efficacy surrounding engagement. Ease of engagement will be measured through three items asking respondents to rate how challenging they find the following aspects of participating in a public engagement activity on a 5-point scale (1 = ``Extremely difficult'' to 5 = ``Extremely easy''): (a) ``explain scientific facts in a way that lay people can understand,'' (b) ``adjust to different kinds of lay people (e.g., children, politicians),'' and (c) ``deal with critical objections from an audience.'' These items will be averaged to create a composite measure of Ease of engagement.
+
+Attitudes towards social media. The following items related to social media attitudes will be measured as agreement with specific statements on a 5-point scale (1 = ``Strongly disagree'' to 5 = ``Strongly agree''): (a) Interested lay audiences -- ``There are lay audiences interested in what scientists have to share about science on social media'', (b) Academic impact -- ``Using social media increases a scientist's academic impact, such as citation rates'', (c) Time consuming -- ``Using social media is too time-consuming'', and (d) Negatively impacts reputation -- ``Using social media negatively impacts a scientist's reputation''. To explore how these attitudes impact overall public engagement, we will include these items separately in the model.
+
+Dependent variable: Social media use for engagement and research purposes. The dependent variable will be measured using four items a 5-point scale (1 = ``Never'' to 5 = ``Everyday'') asking respondents how often they use social media to do each of the following, specifically related to their own research and scholarship: (a) ``Participate in discussion about my field of research,'' (b) ``Write about topics related to my research,'' (c) ``Share announcements about my new studies,'' and (d) ``Engage with peers on post-publication content about my research.'' The items will be averaged to create a composite measure of social media use for engaged research.
+
+\hypertarget{data-analysis}{%
+\subsection{Data analysis}\label{data-analysis}}
+
+To test the research questions and hypotheses regarding science faculty members' use of social media for research and engagement, we will use a hierarchical ordinary least squares (OLS) regression model. All independent variables will be grouped in blocks and introduced into the regression models based on the assumed order of their causality (Cohen, Cohen, West, \& Aiken, 2003). In the model, we will control for demographic factors that impact scientists' social media use. The OLS regression blocks will be ordered as follows:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Demographics and university position (academic age, gender, tenure status life sciences field, and social sciences field)
+\item
+  University engagement climate (PE core component of faculty work and communicators well regarded)
+\item
+  Motivations and drawbacks (motivations for engagement and drawbacks to engagement)
+\item
+  Self-efficacy (Ease of engagement)
+\item
+  Attitudes towards social media (interested lay audiences, academic impact, time consuming, and negatively impacts reputation)
+\end{enumerate}
+
+\hypertarget{expected-results}{%
+\section{Expected Results}\label{expected-results}}
+
+We expect our results to indicate that majority of scientists are active on social media for work-related purposes, although their use may vary depending on the platform. Our science faulty respondents may report that they actively use platforms that are more academically focused such as Wikipedia and ResearchGate, while they are less active on more discussion-focused platforms such as reddit, Twitter, and blogs.
+
+Turning to our OLS regression model, based on the literature, we expect a large portion of the variance in scientists' use of social media for engagement and research-related purposes to be explained by attitudes toward social media and scientists' university positions.
+
+We will furhter address the research question (RQ1) by exploring the relationships between various attitudes toward social media and social media use for engagement and research purposes. Perhaps unsurprisingly, we will find that holding more positive attitudes toward social media was positively associated with social media use, while more negative attitudes were negatively related. Specifically, alignment with the attitudes that ``there are interested lay audiences on social media'' and ``using social media boosts academic impact'' will be positive predictors of scientists' use of social media for work-related purposes, while the attitudes ``social media is too time consuming'' and ``social media negatively impacts reputation'' will be negatively predictors of its use.
+
+\hypertarget{discussionconclusion}{%
+\section{Discussion/Conclusion}\label{discussionconclusion}}
+
+The results of this study will provide insight into how online engagement-related factors influence faculty's level of social media engagement for work related purposes. We expect our results to indicate that, although the potential for social media to spark further scientist-public discussions has been much promoted, we will not find that scientists are currently using these platforms for this purpose. Rather, our results will suggest that scientists may more often turn to social media as a platform to encourage further exchange and collaboration with their colleagues. Second, related to research connecting willingness to engage to attitudes toward the engagement itself (Besley et al., 2018), we also find that scientists' use of social media for work-related purposes will be highly influenced by their attitudes toward social media. Specifically, holding beliefs about social media increasing academic impact and being too time-consuming will be important predictors of using social media for scientific purposes. Notably, self-efficacy will not be a large predictor of using social media for engaged research, contrary to other studies (Besley, 2015; Besley, Oh, \& Nisbet, 2013; Dudo, Kahlor, AbiGhannam, Lazard, \& Liang, 2014; Dunwoody, Brossard, \& Dudo, 2009; Poliakoff \& Webb, 2007). This means that faculty in the sciences may use social media for purposes related to their research, regardless of their beliefs about their engagement skills.
+
+As calls for increased social media use by scientists continue, it is important to qualify these expectations in light of how scientist are currently using social media. That is, we may find that scientists appear to predominately use social media as a platform to enable connections and exchange with their colleagues rather than to communicate science with the public. However, as more scientists turn to social media, their priorities may change. Importantly, scientists' attitudes toward social media color their use of social media. Targeting their attitudes toward social media has the potential to impact whether, and how, scientists use social media.
+
+\printbibliography[title=References]
+
+\end{document}
